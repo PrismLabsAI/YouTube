@@ -1,0 +1,19 @@
+{
+  "name": "claude-code-loop-agents",
+  "version": "1.0.0",
+  "description": "24/7 AI agents using Claude Code Loop",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "bitcoin": "node bitcoin_agent.js",
+    "content": "node content_generator_agent.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.17.1",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.3",
+    "axios": "^1.6.2"
+  },
+  "author": "Prism Labs AI",
+  "license": "MIT"
+}
