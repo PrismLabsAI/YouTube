@@ -1,0 +1,35 @@
+# Example Outreach Agent Configuration for DenchClaw
+# This is a sample config for an email outreach agent.
+# Customize the template, hooks, and settings as needed.
+# Place this in your agent's directory, e.g., /Users/youruser/DenchClaw/agents/leadhunter/config.yaml
+
+# Email template
+# Variables: {name}, {subject}, {body}
+template: |
+  Subject: {subject}
+
+  Dear {name},
+
+  {body}
+
+  Best regards,
+  Your Name
+
+# Default subject and body
+subject: "Exploring AI CRM Solutions"
+body: "I came across your profile and am interested in discussing how AI can enhance CRM automation. Let's connect!"
+
+# Hooks: OpenClaw functions to run
+hooks:
+  - score_leads  # Scores leads based on criteria
+  - draft_email  # Generates email drafts
+
+# Scoring criteria (example: prioritize based on industry)
+scoring:
+  industry_weight: 0.8
+  engagement_weight: 0.2
+
+# Output settings
+output:
+  format: "json"  # Options: json, csv
+  save_to: "./outputs/"  # Directory to save results
