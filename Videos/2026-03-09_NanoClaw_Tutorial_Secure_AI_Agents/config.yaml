@@ -1,0 +1,36 @@
+# Sample NanoClaw Agent Configuration
+# This file defines settings for the AI agent, including API integrations and memory.
+
+agent:
+  name: myagent
+  model: claude-3-haiku-20240307  # Anthropic model
+  memory:
+    enabled: true
+    store: sqlite  # Options: sqlite, redis
+  scheduled_jobs:
+    - cron: '0 9 * * 1'  # Every Monday at 9 AM
+      action: send_weekly_report
+
+integrations:
+  whatsapp:
+    enabled: true
+    phone: '+1234567890'  # Replace with your phone number
+  telegram:
+    enabled: false
+    bot_token: ${TELEGRAM_BOT_TOKEN}
+  slack:
+    enabled: true
+    bot_token: ${SLACK_BOT_TOKEN}
+    channels: ['#general']
+  discord:
+    enabled: true
+    bot_token: ${DISCORD_BOT_TOKEN}
+    guilds: ['example-guild-id']
+  gmail:
+    enabled: false
+    client_id: ${GMAIL_CLIENT_ID}
+    client_secret: ${GMAIL_CLIENT_SECRET}
+
+api:
+  anthropic_key: ${ANTHROPIC_API_KEY}
+  port: 8080

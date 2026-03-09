@@ -1,0 +1,28 @@
+# Docker Compose for NanoClaw Agent
+# Runs the agent in a secure container.
+
+version: '3.8'
+
+services:
+  nanoclaw-agent:
+    image: nanoclaw/agent:latest
+    container_name: myagent
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config.yaml:/app/config.yaml
+      - ./agent_tools.py:/app/agent_tools.py
+      - nanoclaw_data:/app/data  # Persistent data for memory
+    environment:
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      # Add other env vars as needed
+    restart: unless-stopped
+    networks:
+      - nanoclaw_net
+
+volumes:
+  nanoclaw_data:
+
+networks:
+  nanoclaw_net:
