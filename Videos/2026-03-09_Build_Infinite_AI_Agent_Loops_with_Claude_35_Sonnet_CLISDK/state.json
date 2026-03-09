@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    "Build a simple counter app"
+  ],
+  "logs": [],
+  "metrics": {
+    "iterations": 0,
+    "errors": 0
+  }
+}
