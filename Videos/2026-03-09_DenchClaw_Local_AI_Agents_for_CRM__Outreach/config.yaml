@@ -1,0 +1,4 @@
+# Configuration for DenchClaw Companion Agents
+model_name: "distilgpt2"  # Local model for text generation; change to a larger model if available
+prompt_template: "Write a personalized outreach email to {name} about our CRM services."
+# For CRM scorer, it uses 'distilbert-base-uncased-finetuned-sst-2-english' hardcoded in the script for simplicity.
