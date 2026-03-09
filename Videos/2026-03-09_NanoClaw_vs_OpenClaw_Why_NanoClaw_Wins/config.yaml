@@ -1,0 +1,12 @@
+name: my-agent
+model: gpt-3.5-turbo
+reasoning: chain-of-thought
+tools:
+  - web_search
+  - code_executor
+  - file_manager
+memory: persistent
+max_iterations: 10
+guardrails:
+  - no_harmful_content
+  - rate_limit: 100/min
