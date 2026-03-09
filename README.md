@@ -27,7 +27,6 @@ git clone https://github.com/PrismLabsAI/YouTube.git
 
 All code is provided as-is for educational purposes only. **Use at your own risk** — no warranty is provided, express or implied.
 
-For questions or feedback: **code@prismlabsai.com**
 
 ## License
 
