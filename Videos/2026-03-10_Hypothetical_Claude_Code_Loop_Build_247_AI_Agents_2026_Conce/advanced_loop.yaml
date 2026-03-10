@@ -1,0 +1,13 @@
+trigger:
+  type: timer
+  interval: 300
+state:
+  type: persistent_json
+  file: state.json
+actions:
+  - fetch_api
+  - analyze
+  - act
+recovery:
+  max_retries: 5
+  backoff: exponential

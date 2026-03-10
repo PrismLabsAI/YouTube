@@ -1,0 +1,5 @@
+{
+  "prompt": "You are a persistent market agent. Loop: fetch crypto prices every 5 min, alert if BTC > 100k. State: {last_price: null, alerts: []}. On error, retry 3x.",
+  "loop_interval": 300,
+  "api_key_env": "ANTHROPIC_API_KEY"
+}
